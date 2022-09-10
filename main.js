@@ -32,7 +32,7 @@ var mantras = [
 ]
 
 var affirmationRadioButton = document.querySelector("#affirmations")
-var mantrasnRadioButton = document.querySelector("#mantras")
+var mantrasRadioButton = document.querySelector("#mantras")
 var receiveMessageButton = document.querySelector(".receive-message")
 var bellImage = document.querySelector(".bell-picture")
 var textDisplay = document.querySelector("h3")
@@ -41,7 +41,7 @@ var clearButton = document.querySelector(".clear-message")
 var mantraOrAffirmation;
 
 affirmationRadioButton.addEventListener('click', selectAffirmation);
-mantrasnRadioButton.addEventListener('click', selectMantra)
+mantrasRadioButton.addEventListener('click', selectMantra)
 receiveMessageButton.addEventListener('click', displayMessage);
 clearButton.addEventListener('click', clearAll)
 
@@ -51,7 +51,7 @@ function getRandomIndex(array) {
 }
 
 function selectAffirmation() {
-  mantrasnRadioButton.checked = false
+  mantrasRadioButton.checked = false
   mantraOrAffirmation = getRandomIndex(affirmations)
 }
 
@@ -68,7 +68,7 @@ function displayHomePage() {
 
 function clearRadioButtons() {
   affirmationRadioButton.checked = false
-  mantrasnRadioButton.checked = false
+  mantrasRadioButton.checked = false
 }
 
 function clearAll() {
@@ -77,7 +77,7 @@ function clearAll() {
 }
 
 function displayMessage() {
-  if (!affirmationRadioButton.checked && !mantrasnRadioButton.checked) {
+  if (!affirmationRadioButton.checked && !mantrasRadioButton.checked) {
     errorMessage.innerText = "Please make a selection"
     displayHomePage()
   } else {
